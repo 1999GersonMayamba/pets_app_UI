@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:pets_app_laura_gonzalez.Renders"
+             x:Class="pets_app_laura_gonzalez.ContentViews.newproductsContentView">
+ 
+    
+    <ContentView.Content>
+        <CollectionView SelectionMode="Single"
+                            Grid.Row="1"
+                            ItemsSource="{Binding products}"
+                            ItemsLayout="HorizontalList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal" />
+                                <VisualState Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="#d5e2e3" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <StackLayout Margin="8,0">
+                            <Grid RowDefinitions="Auto">
+                                <custom:CustomFrame Grid.Row="0" CornerRadius="10,10,10,10" HeightRequest="70" WidthRequest="200"/>
+                                <Image Source="{Binding Image}" Aspect="AspectFill" Grid.Row="0" HeightRequest="80" WidthRequest="200"/>
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:page="clr-namespace:pets_app_laura_gonzalez.Views"
+            x:Class="pets_app_laura_gonzalez.Views.MainPage"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d" 
+            BarBackground="#ffffff"
+            BarTextColor="#d5e2e3"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            SelectedTabColor="#0096a5">
+  <!--Pages can be added as references or inline-->
+
+    <page:HomeView Title="Home" IconImageSource="Icon_002"/>
+    <page:ArticlesView Title="Articles" IconImageSource="Icon_001"/>
+    <page:SearchView Title="Search" IconImageSource="Icon_005"/>
+    <page:NotificationsView Title="Notifications" IconImageSource="Icon_003"/>
+    <page:ProfileView Title="Profile" IconImageSource="Icon_004"/>
+</TabbedPage>

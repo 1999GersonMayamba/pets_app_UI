@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:pets_app_laura_gonzalez.Templates"
+            xmlns:local="clr-namespace:pets_app_laura_gonzalez.ViewModels"
+             x:Class="pets_app_laura_gonzalez.Views.ProfileView">
+
+    <ContentPage.BindingContext>
+        <local:SearchViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <Grid>
+            <ScrollView>
+                <Grid RowDefinitions="Auto,Auto" Margin="10,30,10,0">
+
+                    <!--Principal Text-->
+                    <Label Grid.Row="0" Text="Find anything you need for your pets" TextColor="#1a2e35" FontSize="30" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+
+                    <FlexLayout Grid.Row="1"
+                                BindableLayout.ItemTemplateSelector="{templates:PetsDataTemplateSelector}"
+                                BindableLayout.ItemsSource="{Binding Pets}"
+                                Direction="Column" />
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

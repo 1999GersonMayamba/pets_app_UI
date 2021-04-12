@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pets_app_laura_gonzalez.Views.HomeView"
+             xmlns:ContentView="clr-namespace:pets_app_laura_gonzalez.ContentViews"
+             xmlns:local="clr-namespace:pets_app_laura_gonzalez.ViewModels"
+             BackgroundColor="#d5e2e3">
+    
+    <ContentPage.BindingContext>
+        <local:walkgroupsViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowDefinitions="Auto,Auto,320,200" Margin="20,20,10,0">
+
+            <StackLayout Grid.Row="0" Spacing="0">
+                <Label Text="Hi, Ferran" FontAttributes="Bold" FontSize="30" TextColor="#1a2e35"/>
+                <Label Text="Check out the new products, groups, events, places and more!" TextColor="#1a535c" FontSize="13"/>
+            </StackLayout>
+
+
+            <Frame Grid.Row="1" BackgroundColor="#00b7b7" CornerRadius="15" HeightRequest="15" Margin="0,20,9,0"/>
+            <Grid Grid.Row="1" RowDefinitions="Auto" ColumnDefinitions="Auto,250" ColumnSpacing="0" Padding="10,0,0,0" Margin="0,20,0,0">
+                <Image Grid.Column="0" Grid.Row="0" Source="Image_002"  HeightRequest="60" WidthRequest="60"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Lola is lost in your neighborhood! Help us find her!" TextColor="White" FontSize="18" VerticalTextAlignment="Center"/>
+            </Grid>
+
+            
+            <!--walkgroups List-->
+            <Grid Grid.Row="2" RowDefinitions="Auto,Auto" Margin="0,20,0,0">
+                <Label Grid.Row="0" Text="WALK GROUPS" FontSize="20" TextColor="#1a2e35" HorizontalOptions="Start" Margin="5,0,0,0"/>
+                <Label Grid.Row="0" Text="See all" FontSize="20" TextColor="#1a2e35" HorizontalOptions="End"/>
+                <ContentView:walkgroupsContentView Grid.Row="1"/>
+            </Grid>
+
+
+            <!--Products List-->
+            <Grid Grid.Row="3" RowDefinitions="Auto,Auto">
+                <Label Grid.Row="0" Text="NEW PRODUCTS" FontSize="20" TextColor="#1a2e35" HorizontalOptions="Start" Margin="5,0,0,0"/>
+                <Label Grid.Row="0" Text="See all" FontSize="20" TextColor="#1a2e35" HorizontalOptions="End"/>
+                <ContentView:newproductsContentView Grid.Row="1"/>
+            </Grid>
+            
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>
