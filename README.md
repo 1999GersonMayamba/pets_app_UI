@@ -2,10 +2,11 @@
 
 UI clonada do .xd para o xamarin
 
-<h2><p><b>Link do Design .Xd</b></p></h2>
+<p><b>Link do Design .Xd</b></p>
 https://dribbble.com/shots/11198488-Pets-Care-App-UI
 
 <p><b>SCREEN CAPTURE/b></p>
+  
 <p>
   <img src="https://user-images.githubusercontent.com/57480551/114552125-9febd080-9c3a-11eb-8e0e-b1e928c00242.png" width="350" alt="accessibility tex="Location">
   <img src="https://user-images.githubusercontent.com/57480551/114552204-b72abe00-9c3a-11eb-9c6f-680c47c748f7.png" width="350" title="Home">
